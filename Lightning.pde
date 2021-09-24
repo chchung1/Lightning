@@ -7,7 +7,7 @@ int r = 195;
 int g = 255;
 int b = 127;
 
-int i;
+int i = 0;
 
 void setup()
 {
@@ -39,7 +39,7 @@ void draw()
 
 void mousePressed()
 {
-  if(i <= 10){
+  //if(i <= 10){
   r = (int)(Math.random()*129)+127;
   g = (int)(Math.random()*129)+127;
   b = (int)(Math.random()*129)+127;
@@ -56,16 +56,18 @@ void mousePressed()
   yi = y;
 
   i++;
-  }
-  else{
-  fill(r,g,b);
-  ellipse(xi,yi,15,15);
-  fill(0);
-  ellipse(xi,yi-1,3,3);
+  //}
+  //else{
+  //fill(r,g,b);
+  //ellipse(xi,yi,15,15);
+  //fill(0);
+  //ellipse(xi,yi-1,3,3);
   
+  if(i==5){
   fill(255,255,255);
   text("many snakes in da boot oh no",40,60);
   }
+  
   
 }
 
